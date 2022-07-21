@@ -30,6 +30,17 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
+                <div class="form-group form-check">
+                    <p>Tag</p>
+                    @foreach ($tags as $tag)
+                        <input type="checkbox" class="form-check-input @error('{{$tag->id}}') is-invalid @enderror" id="{{$tag->id}}" name="tags[]" {{in_array($tag->id, old('tags',[])) ? 'checked' : ''}}>
+                        <label class="form-check-label" for="{{$tag->id}}">{{$tag->name}}</label>
+                        @error('tags')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    @endforeach
+                    
+                </div>
                 <div class="form-group">
                     <label for="category_id">Example select</label>
                     <select class="form-control" id="category_id" name="category_id">

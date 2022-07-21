@@ -35,6 +35,7 @@
                     <ul class="navbar-nav mr-auto">
                         <li><a class="btn btn-light" href="{{route('admin.posts.index')}}">Posts</a></li>
                         <li><a class="btn btn-light" href="{{route('admin.categories.index')}}">Categorie</a></li>
+                        <li><a class="btn btn-light" href="{{route('admin.tags.index')}}">Tags</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
